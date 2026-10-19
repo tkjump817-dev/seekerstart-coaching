@@ -16,3 +16,12 @@
 ## 申し込みフォーム
 
 `index.html` の `https://formspree.io/f/YOUR_FORM_ID` を、Formspree で作ったフォームのIDに置き換えると、申し込みがメールで届くようになります。
+
+## 練習環境 → 本番公開
+
+いまは「限定公開」の練習環境です（URLを知っている人だけが見る想定）。
+
+本番公開するときは：
+1. `index.html` の `<meta name="robots" content="noindex, nofollow">` の行を削除
+2. `robots.txt` を削除
+3. シースタ本体のメニューに「コーチング」のリンクを追加
