@@ -1,0 +1,191 @@
+/* シースタ本体（seekerstart.com）と同じデザインの値 */
+:root {
+  --color-primary: #1B4332;
+  --color-primary-light: #2D6A4F;
+  --color-secondary: #D4AF37;
+  --color-cta: #F5A623;
+  --color-cta-text: #1A1A2E;
+  --color-background: #F8F9FA;
+  --color-surface: #FFFFFF;
+  --color-text: #212529;
+  --color-text-muted: #6A7178;
+  --color-border: #DEE2E6;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --max-width: 960px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+a { color: var(--color-primary-light); }
+
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 16px; }
+
+/* ---------- ヘッダー（本体と共通） ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--color-primary);
+  color: #fff;
+}
+.site-header .container {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; min-height: 76px; flex-wrap: wrap;
+}
+.logo {
+  display: flex; align-items: center; gap: 10px;
+  color: #fff; text-decoration: none; font-weight: 700; font-size: 18px;
+}
+.logo img { width: 36px; height: 36px; }
+.site-nav {
+  display: flex; gap: 4px 20px; overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.site-nav a {
+  color: #fff; text-decoration: none; white-space: nowrap;
+  padding: 10px 0; opacity: 0.9;
+}
+.site-nav a:hover { opacity: 1; text-decoration: underline; }
+.site-nav a[aria-current="page"] {
+  opacity: 1; font-weight: 700;
+  box-shadow: inset 0 -3px 0 var(--color-secondary);
+}
+
+/* ---------- ボタン ---------- */
+.btn {
+  display: inline-block; text-decoration: none; text-align: center;
+  border-radius: 100px; font-weight: 700; cursor: pointer;
+  font-family: inherit; line-height: 1.6;
+}
+.btn-primary {
+  background: var(--color-cta); color: var(--color-cta-text);
+  padding: 16px 32px; font-size: 18px; border: 0;
+}
+.btn-primary:hover { filter: brightness(1.05); }
+.btn-ghost {
+  border: 2px solid rgba(255,255,255,0.5); color: #fff;
+  padding: 14px 28px; font-weight: 600;
+}
+.btn-outline {
+  border: 2px solid var(--color-primary); color: var(--color-primary);
+  padding: 12px 24px; background: #fff;
+}
+
+/* ---------- ヒーロー ---------- */
+.hero {
+  background: linear-gradient(135deg, var(--color-primary) 0, var(--color-primary-light) 100%);
+  color: #fff; padding: 72px 0 80px;
+}
+.eyebrow {
+  margin: 0 0 12px; font-size: 13px; font-weight: 700;
+  letter-spacing: 0.12em; color: var(--color-secondary);
+}
+.hero h1 { margin: 0; font-size: clamp(28px, 5vw, 40px); line-height: 1.35; }
+.hero p.lead { margin: 20px 0 0; font-size: 18px; max-width: 36em; opacity: 0.95; }
+.hero-actions { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ---------- セクション共通 ---------- */
+section.block { padding: 72px 0; }
+section.block.alt { background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+.section-title { margin: 0 0 8px; font-size: 24px; color: var(--color-primary); }
+.section-lead { margin: 0 0 32px; color: var(--color-text-muted); }
+
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+.card {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-md); padding: 24px;
+}
+.alt .card { background: var(--color-background); }
+.card .num { margin: 0 0 6px; font-weight: 700; color: var(--color-secondary); }
+.card h3 { margin: 0 0 6px; font-size: 18px; }
+.card p { margin: 0; color: var(--color-text-muted); }
+
+/* ---------- 料金 ---------- */
+.plans { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); align-items: stretch; }
+.plan {
+  position: relative; background: var(--color-surface);
+  border: 1px solid var(--color-border); border-radius: var(--radius-lg);
+  padding: 32px 24px; display: flex; flex-direction: column; gap: 16px;
+}
+.plan.featured { border: 2px solid var(--color-primary); }
+.plan .badge {
+  position: absolute; top: -13px; left: 24px; margin: 0;
+  background: var(--color-primary); color: #fff;
+  font-size: 12px; font-weight: 700; padding: 2px 12px; border-radius: 100px;
+}
+.plan h3 { margin: 0; font-size: 20px; }
+.plan .desc { margin: 4px 0 0; color: var(--color-text-muted); font-size: 14px; }
+.plan .price { margin: 0; font-size: 30px; font-weight: 700; color: var(--color-primary); }
+.plan .price small { font-size: 14px; font-weight: 400; color: var(--color-text-muted); }
+.plan ul { margin: 0; padding-left: 20px; flex-grow: 1; }
+.note { margin: 16px 0 0; font-size: 13px; color: var(--color-text-muted); }
+
+/* ---------- コーチ ---------- */
+.coach { display: flex; flex-wrap: wrap; gap: 32px; align-items: center; }
+.coach-photo {
+  flex: 1 1 220px; max-width: 280px; aspect-ratio: 4 / 5;
+  border-radius: var(--radius-lg); background: #E9ECEF; object-fit: cover;
+  display: flex; align-items: center; justify-content: center; color: var(--color-text-muted);
+}
+.coach-body { flex: 999 1 360px; min-width: 0; }
+.coach-body h2 { margin: 0; font-size: 28px; color: var(--color-primary); }
+.coach-facts { margin: 20px 0 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+.coach-facts div { border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 12px 16px; background: var(--color-surface); }
+.coach-facts dt { font-size: 13px; color: var(--color-text-muted); }
+.coach-facts dd { margin: 2px 0 0; font-weight: 700; }
+
+/* ---------- 流れ ---------- */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.steps li { display: flex; gap: 14px; align-items: flex-start; }
+.steps .n {
+  flex: 0 0 auto; width: 40px; height: 40px; border-radius: 50%;
+  background: var(--color-primary); color: #fff; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.steps strong { display: block; }
+.steps span.t { color: var(--color-text-muted); font-size: 14px; }
+
+/* ---------- FAQ（本体と同じ見た目） ---------- */
+.faq { display: flex; flex-direction: column; gap: 12px; }
+.faq details {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-md); padding: 0 20px;
+}
+.faq summary { padding: 16px 0; font-weight: 700; cursor: pointer; }
+.faq details p { margin: 0 0 16px; color: var(--color-text-muted); }
+
+/* ---------- 申し込み ---------- */
+.apply { background: linear-gradient(135deg, var(--color-primary) 0, var(--color-primary-light) 100%); color: #fff; padding: 72px 0; }
+.apply .container { display: flex; flex-wrap: wrap; gap: 32px; }
+.apply-copy { flex: 1 1 280px; }
+.apply-copy h2 { margin: 0; font-size: clamp(24px, 4vw, 32px); line-height: 1.4; }
+.apply-copy p { opacity: 0.95; }
+.apply form {
+  flex: 999 1 380px; min-width: 0; background: var(--color-surface); color: var(--color-text);
+  border-radius: var(--radius-lg); padding: 28px 24px; display: flex; flex-direction: column; gap: 16px;
+}
+.field { display: flex; flex-direction: column; gap: 4px; }
+.field label { font-weight: 700; font-size: 14px; }
+.field input, .field select, .field textarea {
+  font: inherit; padding: 10px 12px; min-height: 44px;
+  border: 1px solid var(--color-border); border-radius: var(--radius-md); background: #fff;
+}
+.field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--color-primary-light); outline-offset: 1px; }
+
+/* ---------- フッター（本体と共通） ---------- */
+.site-footer { background: var(--color-primary); color: rgba(255,255,255,0.8); font-size: 14px; padding: 40px 0; }
+.site-footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
+.site-footer a:hover { color: #fff; text-decoration: underline; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0 0 16px; padding: 0; list-style: none; }
