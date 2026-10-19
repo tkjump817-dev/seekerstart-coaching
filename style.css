@@ -189,3 +189,4 @@ section.block.alt { background: var(--color-surface); border-top: 1px solid var(
 .site-footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
 .site-footer a:hover { color: #fff; text-decoration: underline; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0 0 16px; padding: 0; list-style: none; }
+.plan.plan-empty { min-height: 240px; }
