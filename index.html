@@ -144,8 +144,9 @@
     <div class="container">
       <h2 class="section-title">はじめるまでの流れ</h2>
       <ol class="steps">
-        <li><span class="n">1</span><div><strong>フォームから申し込み</strong><span class="t">レベルや悩みを簡単にお書きください。</span></div></li>
-        <li><span class="n">2</span><div><strong>プラン決定・初回セッション</strong><span class="t">合うプランを選んで、コーチングを開始します。</span></div></li>
+        <li><span class="n">1</span><div><strong>フォームから申し込み</strong><span class="t">希望コースやいまの悩みを簡単にお書きください。</span></div></li>
+        <li><span class="n">2</span><div><strong>公式LINEを友だち追加</strong><span class="t">日程調整やお支払いのご案内はLINEで行います。</span></div></li>
+        <li><span class="n">3</span><div><strong>初回セッション</strong><span class="t">日程が決まったら、コーチングを開始します。</span></div></li>
       </ol>
     </div>
   </section>
@@ -168,32 +169,16 @@
       <div class="apply-copy">
         <p class="eyebrow">APPLY</p>
         <h2>「なんとなく」のプレイから、<br>一歩抜け出そう。</h2>
-        <p>いまの悩みや目標を、フォームから気軽にお聞かせください。</p>
+        <p>フォームでお申し込みのあと、公式LINEから日程などをご案内します。</p>
       </div>
-      <!-- 送信先：Formspree（無料）で作ったフォームIDに置き換えると、申し込みがメールで届きます -->
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div class="field">
-          <label for="f-name">お名前</label>
-          <input id="f-name" name="name" type="text" autocomplete="name" required>
-        </div>
-        <div class="field">
-          <label for="f-mail">メールアドレス</label>
-          <input id="f-mail" name="email" type="email" autocomplete="email" required>
-        </div>
-        <div class="field">
-          <label for="f-level">プレイ歴</label>
-          <select id="f-level" name="level">
-            <option>1年未満</option>
-            <option>1〜3年</option>
-            <option>3年以上</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="f-msg">いまの悩み・目標</label>
-          <textarea id="f-msg" name="message" rows="4" placeholder="例：フロップ以降の打ち方が分からない"></textarea>
-        </div>
-        <button class="btn btn-primary" type="submit">申し込む</button>
-      </form>
+      <div class="apply-card">
+        <ol class="apply-steps">
+          <li><span class="n">1</span><div><strong>申し込みフォームに入力</strong><span class="t">1〜2分で終わります。</span></div></li>
+          <li><span class="n">2</span><div><strong>公式LINEを友だち追加</strong><span class="t">日程調整などのご連絡はLINEで行います。</span></div></li>
+        </ol>
+        <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdcC6eXLek0j-ToBz4_ScLi7vROpwDnhl6rSa1IV9TXrg1UJw/viewform" target="_blank" rel="noopener">申し込みフォームを開く</a>
+        <a class="btn btn-line" href="https://lin.ee/7NI19sO" target="_blank" rel="noopener">公式LINEを友だち追加</a>
+      </div>
     </div>
   </section>
 </main>
