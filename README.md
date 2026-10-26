@@ -15,8 +15,8 @@
 
 ## 申し込み
 
-- 申し込み：Googleフォーム（回答はスプレッドシートで管理）
-- 個別のやりとり：公式LINE（https://lin.ee/7NI19sO）
+- 申し込み・やりとり：公式LINE（https://lin.ee/7NI19sO）
+- Googleフォームは一時停止中（URLは index.html の申し込みカード内のコメントに保存）
 
 URLを変えるときは `index.html` の「申し込みカード」部分のリンクを書き換えてください。
 
