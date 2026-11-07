@@ -5,201 +5,403 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- 練習環境（限定公開）中は検索エンジンに出さない。本番公開時にこの1行を削除 -->
 <meta name="robots" content="noindex, nofollow">
-<title>ポーカーコーチング｜シースタ</title>
-<meta name="description" content="キャッシュゲーム（リングゲーム）で初心者を卒業したい人のための、全3回のポーカーコーチング。鉄強会を100回以上やって分かった初心者のつまずきポイントをもとに、判断の土台をつくります。">
-<link rel="icon" href="https://www.seekerstart.com/favicon.png">
+<title>Seeker Start｜考え方から身につける、キャッシュゲームのコーチング</title>
+<meta name="description" content="自分のアクションの理由を言葉で説明できるプレイヤーへ。感覚や暗記に頼らず、自分で考えてプレーできる。THINK→LEARN→GROWの全5回で学ぶ、キャッシュゲーム（リングゲーム）のコーチング。1回約2時間15,000円（税込）・都度払いOK。">
+<meta name="theme-color" content="#0C1A33">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Seeker Start｜キャッシュゲームのコーチング">
+<meta property="og:description" content="自分のアクションの理由を言葉で説明できるプレイヤーへ。THINK→LEARN→GROWの全5回。1回約2時間15,000円（税込）・都度払いOK。">
+<meta property="og:url" content="https://tkjump817-dev.github.io/seekerstart-coaching/">
+<meta property="og:image" content="https://tkjump817-dev.github.io/seekerstart-coaching/images/ogp.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="images/logo-sm.png">
+<link rel="apple-touch-icon" href="images/logo-sm.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap">
+<link rel="preload" as="image" href="images/hero.jpg" imagesrcset="images/hero-sm.jpg 960w, images/hero.jpg 1672w" imagesizes="100vw">
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
+<script src="script.js" defer></script>
 </head>
 <body>
 
-<!-- ヘッダー：シースタ本体と同じメニュー＋「コーチング」 -->
-<header class="site-header">
-  <div class="container">
-    <a class="logo" href="https://www.seekerstart.com/">
-      <img src="https://www.seekerstart.com/images/logo.webp" alt="" width="36" height="36">
-      <span>SeekerStart</span>
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<!-- ===== ヘッダー ===== -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="./" aria-label="Seeker Start トップ">
+      <img src="images/logo-sm.png" alt="" width="28" height="38">
+      <span class="brand-text"><span class="brand-name">Seeker Start</span><span class="brand-sub">Cash Game Coaching</span></span>
     </a>
-    <nav class="site-nav" aria-label="メインメニュー">
-      <a href="https://www.seekerstart.com/learn">学ぶ</a>
-      <a href="https://www.seekerstart.com/columns">コラム</a>
-      <a href="https://www.seekerstart.com/glossary">用語集</a>
-      <a href="https://www.seekerstart.com/tournaments">大会スケジュール</a>
-      <a href="https://www.seekerstart.com/houou/">鳳凰戦</a>
-      <a href="./" aria-current="page">コーチング</a>
-      <a href="https://www.seekerstart.com/about">運営情報</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="ページ内メニュー">
+      <a href="#concept">コンセプト</a>
+      <a href="#curriculum">カリキュラム</a>
+      <a href="#coach">コーチ</a>
+      <a href="#price">料金</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-home" href="https://www.seekerstart.com/">シースタ トップへ</a>
+      <a class="btn btn-line btn-sm" href="https://lin.ee/7NI19sO" target="_blank" rel="noopener">LINEで相談</a>
     </nav>
   </div>
 </header>
 
-<main>
-  <!-- ヒーロー -->
+<main id="main">
+
+  <!-- ===== 1. ヒーロー ===== -->
   <section class="hero">
-    <div class="container">
-      <div class="hero-box">
-      <h1>正しい思考プロセスを、<br>言葉で説明できるプレイヤーへ。</h1>
-      <p class="lead">キャッシュゲーム（リングゲーム）で初心者を卒業したい人のための、コーチング（前半3回＋後半2回、1回約2時間）。鉄強会を100回以上やって分かった初心者のつまずきポイントをもとに、アクション決定のための正しい思考プロセスを身につけます。</p>
+    <picture class="hero-bg">
+      <source media="(max-width: 760px)" srcset="images/hero-sm.jpg">
+      <img src="images/hero.jpg" alt="Seeker Startのロゴが入ったポーカーテーブルと、戦略を書き込んだノート" width="1672" height="941" fetchpriority="high">
+    </picture>
+    <div class="container hero-inner">
+      <p class="hero-eyebrow"><span>ANALYSIS</span><span>STRATEGY</span><span>DECISION MAKING</span></p>
+      <p class="hero-question">そのアクション、<br class="sp">理由まで説明できますか？</p>
+      <h1 class="hero-title">自分のアクションの<br>理由を言葉で説明できる<br><span class="accent">プレイヤーへ！</span></h1>
+      <p class="hero-catch">考え方から身につける、キャッシュゲームのコーチング</p>
+      <ul class="hero-facts" aria-label="コーチングの概要">
+        <li><strong>全5回</strong>THINK → LEARN</li>
+        <li><strong>約2時間</strong>1回あたり</li>
+        <li><strong>15,000円</strong>税込・都度払いOK</li>
+        <li><strong>オンライン・対面</strong>どちらも対応</li>
+      </ul>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#plans">料金プランを見る</a>
-      </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 悩み -->
-  <section class="block">
-    <div class="container">
-      <h2 class="section-title">こんな壁に当たっていませんか？</h2>
-      <p class="section-lead">ひとつでも当てはまるなら、コーチングで伸ばせる余地があります。</p>
-      <div class="grid">
-        <div class="card"><p class="num">01</p><h3>参加するハンドが曖昧</h3><p>プリフロップで、なんとなくコールしてしまう。</p></div>
-        <div class="card"><p class="num">02</p><h3>フロップ以降で手が止まる</h3><p>フロップでヒットやドローがないときのプランがない。</p></div>
-        <div class="card"><p class="num">03</p><h3>ベットサイズに根拠がない</h3><p>どんなサイズのベットをすれば良いのか、毎回迷ってしまう。</p></div>
-        <div class="card"><p class="num">04</p><h3>プレイの良し悪しが分からない</h3><p>振り返り方が分からず、同じミスを繰り返す。</p></div>
+        <a class="btn btn-line" href="https://lin.ee/7NI19sO" target="_blank" rel="noopener">公式LINEで相談する</a>
+        <a class="btn btn-ghost" href="#curriculum">カリキュラムを見る</a>
       </div>
     </div>
   </section>
 
-  <!-- 指導内容 -->
-  <section id="method" class="block alt">
-    <div class="container">
-      <h2 class="section-title">コーチングの特徴</h2>
-      <p class="section-lead">正解のアクションを覚えるのではなく、なぜそうするのかを自分の言葉で説明できる状態を目指します。</p>
-      <div class="grid">
-        <div class="card"><p class="num">01</p><h3>前半3回＋後半2回</h3><p>1回約2時間。前半で思考プロセスを身につけ、後半で基礎概念を体系的に固めます。</p></div>
-        <div class="card"><p class="num">02</p><h3>つまずきポイントから逆算</h3><p>鉄強会を100回以上やって分かった、初心者が迷いやすい場面を中心に扱います。</p></div>
-        <div class="card"><p class="num">03</p><h3>判断の理由を言葉にする</h3><p>「なぜそのアクションなのか」を説明できるまで、一緒に考えます。</p></div>
+  <!-- ===== 2. リード（チラシ本文） ===== -->
+  <section class="section intro">
+    <div class="container narrow">
+      <p class="label">ABOUT</p>
+      <h2 class="section-title">感覚や暗記に頼らず、<br>自分で考えてプレーできる。</h2>
+      <div class="intro-body">
+        <p>動画や記事で戦略を学んでも、実戦では何となくベットしてしまう。<br>GTOを勉強したいけれど、難しくて何から手をつければいいかわからない。</p>
+        <p>Seeker Startのコーチングでは、そんな悩みに向き合い、<mark>前半3回で実戦に必要な思考プロセスを学び</mark>、感覚頼りのプレーからの卒業を目指します。<br><mark>後半2回では、GTOや戦略教材を自分で読み解き、学習を進める方法を習得</mark>。</p>
+        <p>終わりの見えない勉強ではなく、学ぶべきことを整理し、自分の力で成長していくための道筋をつくります。</p>
       </div>
     </div>
   </section>
 
-  <!-- できるようになること -->
-  <section id="outcome" class="block">
+  <!-- ===== 3. こんな「壁」 ===== -->
+  <section class="section section-tint" id="problems">
     <div class="container">
-      <h2 class="section-title">できるようになること</h2>
-      <p class="section-lead">前半で「考え方」を、後半で「学び方」を身につけます。</p>
-      <div class="grid">
-        <div class="card">
-          <p class="num">前半 全3回</p>
-          <h3>アクション決定のための正しい思考プロセス</h3>
-          <p>アクション決定のための正しい思考プロセスを、全3回で伝授します。受講後は、アクションを決定した理由を言語化でき、自分で振り返り学習ができるようになります。</p>
-        </div>
-        <div class="card">
-          <p class="num">後半 全2回</p>
-          <h3>ポーカー学習の完全な自走</h3>
-          <p>基礎的な概念を体系的に詰め込み、ポーカーの学習を完全に自走できるようになるところまで用意しています。</p>
-        </div>
-      </div>
+      <p class="label">PROBLEMS</p>
+      <h2 class="section-title">こんな「壁」を感じている方へ</h2>
+      <ul class="walls">
+        <li><span class="check" aria-hidden="true"></span><p>概念やtipsをたくさん取り入れるが、<mark>実戦に結びつかない</mark></p></li>
+        <li><span class="check" aria-hidden="true"></span><p>preflopは覚えたが、<mark>flop以降の指針がない</mark></p></li>
+        <li><span class="check" aria-hidden="true"></span><p>GTOと照らし合わせて<mark>正解不正解だけ</mark>を見ている</p></li>
+        <li><span class="check" aria-hidden="true"></span><p>GTOを学び始めたが、<mark>何に注目すべきか分からない</mark></p></li>
+        <li><span class="check" aria-hidden="true"></span><p>自分のプレイが正しかったのか？<mark>具体的な検証方法がわからない</mark></p></li>
+      </ul>
     </div>
   </section>
 
-  <!-- 料金 -->
-  <section id="plans" class="block alt">
+  <!-- ===== 4. コンセプト THINK → LEARN → GROW ===== -->
+  <section class="section concept" id="concept">
     <div class="container">
-      <h2 class="section-title">料金プラン</h2>
-      <p class="section-lead">1回約2時間・1回 15,000円。お支払いは1回ごとの都度払いが可能です。</p>
-      <div class="plans">
-        <div class="plan">
-          <div><h3>前半コース</h3><p class="desc">アクション決定のための正しい思考プロセスを身につける</p></div>
-          <p class="price">15,000円<small> / 回</small></p>
-          <ul>
-            <li>全3回（1回約2時間）</li>
-            <li>合計 45,000円</li>
-            <li>1回ごとの都度払いOK</li>
-            <li>アクションを決定した理由を言語化できるようになる</li>
-            <li>自分で振り返り学習ができるようになる</li>
-          </ul>
-          <a class="btn btn-outline" href="#apply">申し込む</a>
-        </div>
-        <div class="plan">
-          <div><h3>後半コース</h3><p class="desc">基礎的な概念を体系的に詰め込む</p></div>
-          <p class="price">15,000円<small> / 回</small></p>
-          <ul>
-            <li>全2回（1回約2時間）</li>
-            <li>合計 30,000円</li>
-            <li>1回ごとの都度払いOK</li>
-            <li>基礎的な概念を体系的に学ぶ</li>
-            <li>ポーカーの学習を完全に自走できるようになる</li>
-          </ul>
-          <a class="btn btn-outline" href="#apply">申し込む</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- コーチ紹介（写真は images/ フォルダの画像を差し替え） -->
-  <section id="coach" class="block">
-    <div class="container">
-      <h2 class="section-title">コーチ紹介</h2>
-      <div class="coaches">
-        <div class="coach-card"><div class="coach-photo"><img src="images/coach-arash.jpg" alt="ARASH!のアイコン" width="120" height="120" loading="lazy"></div><p class="coach-name">ARASH!</p></div>
-        <div class="coach-card"><div class="coach-photo"><img src="images/coach-shiguma.jpg" alt="しぐまのアイコン" width="120" height="120" loading="lazy"></div><p class="coach-name">しぐま</p></div>
-        <div class="coach-card"><div class="coach-photo"><img src="images/coach-yamashi.jpg" alt="やましーのアイコン" width="120" height="120" loading="lazy"></div><p class="coach-name">やましー</p></div>
-        <div class="coach-card"><div class="coach-photo"><img src="images/coach-take.jpg" alt="たけのアイコン" width="120" height="120" loading="lazy"></div><p class="coach-name">たけ</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 流れ -->
-  <section class="block alt">
-    <div class="container">
-      <h2 class="section-title">はじめるまでの流れ</h2>
-      <ol class="steps">
-        <li><span class="n">1</span><div><strong>公式LINEを友だち追加</strong><span class="t">希望コースやいまの悩みを、LINEでお気軽にお送りください。</span></div></li>
-        <li><span class="n">2</span><div><strong>日程・お支払いのご案内</strong><span class="t">LINEで日程を調整し、お支払い方法をご案内します。</span></div></li>
-        <li><span class="n">3</span><div><strong>初回セッション</strong><span class="t">日程が決まったら、コーチングを開始します。</span></div></li>
+      <p class="label label-on-dark">CONCEPT</p>
+      <h2 class="section-title on-dark">THINK → LEARN → GROW</h2>
+      <p class="section-lead on-dark">考え方を学び、学び方を身につけ、自ら成長できるプレイヤーへ。</p>
+      <ol class="stages">
+        <li class="stage">
+          <svg class="stage-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V6a3 3 0 0 0-3-3Z"/><path d="M15 3a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/><path d="M12 8h2M12 13h3"/></svg>
+          <p class="stage-en">THINK</p>
+          <h3 class="stage-title">考え方を学ぶ</h3>
+          <p class="stage-when">前半　第1〜3回</p>
+          <p class="stage-text">実戦に必要な思考プロセスを学び、感覚頼りのプレーからの卒業を目指します。</p>
+        </li>
+        <li class="stage">
+          <svg class="stage-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5C5.5 4 8.5 4 12 6c3.5-2 6.5-2 9-.5V19c-2.5-1.5-5.5-1.5-9 .5-3.5-2-6.5-2-9-.5Z"/><path d="M12 6v13.5"/></svg>
+          <p class="stage-en">LEARN</p>
+          <h3 class="stage-title">学び方を身につける</h3>
+          <p class="stage-when">後半　第4〜5回</p>
+          <p class="stage-text">GTOや戦略教材を自分で読み解き、学習を進める方法を習得します。</p>
+        </li>
+        <li class="stage stage-goal">
+          <svg class="stage-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
+          <p class="stage-en">GROW</p>
+          <h3 class="stage-title">自ら成長する</h3>
+          <p class="stage-when">GOAL</p>
+          <p class="stage-text">学ぶべきことを整理し、自分の力で成長していくための道筋をつくります。</p>
+        </li>
       </ol>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="block">
+  <!-- ===== 5. カリキュラム（チラシ「学習テーマ」準拠） ===== -->
+  <section class="section" id="curriculum">
     <div class="container">
-      <h2 class="section-title">よくある質問</h2>
-      <div class="faq">
-        <details><summary>初心者でも受けられますか？</summary><p>はい。ルールを把握していれば大丈夫です。レベルに合わせて進め方を決めます。</p></details>
-        <details><summary>セッションはどこで行いますか？</summary><p>オフライン・オンラインのどちらでも受講できます。<br>オフライン：場所はお申し込み後に調整します。<br>オンライン：お客様のご希望のツールで行います。</p></details>
-        <details><summary>キャンセルや日程変更はできますか？</summary><p>受講予定日時の24時間前まで、キャンセル・日程変更が可能です。公式LINEからご連絡ください。</p></details>
+      <p class="label">CURRICULUM</p>
+      <h2 class="section-title">学習テーマ　全5回</h2>
+      <p class="section-lead">1回約2時間。どの回も単発で選んで受講できます。</p>
+
+      <div class="phase">
+        <div class="phase-head">
+          <p class="phase-en">THINK</p>
+          <p class="phase-ja">前半　考え方を学ぶ</p>
+        </div>
+        <ol class="sessions">
+          <li class="session">
+            <p class="session-no">第<span>1</span>回</p>
+            <div><h3>基本編</h3><p>バリューとブラフ、Preflop→Flopのレンジの絞り込み</p></div>
+          </li>
+          <li class="session">
+            <p class="session-no">第<span>2</span>回</p>
+            <div><h3>搾取の基礎</h3><p>Flop→Riverのアクションによるレンジの絞り込み、効果的な応答</p></div>
+          </li>
+          <li class="session">
+            <p class="session-no">第<span>3</span>回</p>
+            <div><h3>搾取の発展</h3><p>よくあるリークの類型と観測、テルによるレンジの分割</p></div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="phase">
+        <div class="phase-head">
+          <p class="phase-en">LEARN</p>
+          <p class="phase-ja">後半　学び方を身につける</p>
+        </div>
+        <ol class="sessions" start="4">
+          <li class="session">
+            <p class="session-no">第<span>4</span>回</p>
+            <div><h3>ポーカー算数</h3><p>ポーカーに関連する算数と発展概念を学ぶ</p></div>
+          </li>
+          <li class="session">
+            <p class="session-no">第<span>5</span>回</p>
+            <div><h3>toy-game</h3><p>ポーカーの本質をtoy-gameで学ぶ</p></div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="phase phase-goal">
+        <div class="phase-head">
+          <p class="phase-en">GROW</p>
+          <p class="phase-ja">ゴール　自ら成長する</p>
+        </div>
+        <ul class="goals">
+          <li>アクションを決定した理由を言語化できる</li>
+          <li>自分で振り返り学習ができる</li>
+          <li>GTOや戦略教材を自分で読み解き、学習を進められる</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- 申し込み -->
-  <section id="apply" class="apply">
+  <!-- ===== 6. 選ばれる理由 ===== -->
+  <section class="section section-tint" id="reasons">
     <div class="container">
-      <div class="apply-copy">
-        <p class="eyebrow">APPLY</p>
-        <h2>「なんとなく」のプレイから、<br>一歩抜け出そう。</h2>
-        <p>お申し込み・ご相談は公式LINEで受け付けています。日程などもLINEでご案内します。</p>
+      <p class="label">WHY SEEKER START</p>
+      <h2 class="section-title">Seeker Startが選ばれる理由</h2>
+      <div class="reasons">
+        <div class="reason">
+          <p class="reason-no">01</p>
+          <h3>つまずきポイントから逆算</h3>
+          <p>鉄強会を100回以上やって分かった、初心者が迷いやすい場面を中心に扱います。</p>
+        </div>
+        <div class="reason">
+          <p class="reason-no">02</p>
+          <h3>判断の理由を言葉にする</h3>
+          <p>正解のアクションを覚えるのではなく、「なぜそのアクションなのか」を説明できるまで一緒に考えます。</p>
+        </div>
+        <div class="reason">
+          <p class="reason-no">03</p>
+          <h3>THINK → LEARNの体系</h3>
+          <p>前半で思考プロセスを、後半で学び方を。学ぶ順番が決まっているので、何から手をつけるか迷いません。</p>
+        </div>
       </div>
-      <div class="apply-card">
-        <ol class="apply-steps">
-          <li><span class="n">1</span><div><strong>公式LINEを友だち追加</strong><span class="t">下のボタンから友だち追加してください。</span></div></li>
-          <li><span class="n">2</span><div><strong>メッセージを送る</strong><span class="t">希望コースやいまの悩みを、ひとことでお送りください。</span></div></li>
+
+      <!-- 比較表：内容はチラシ・既存サイトの記載から作成。文言は要確認 -->
+      <div class="compare" role="region" aria-label="独学との比較">
+        <table>
+          <caption>独学とSeeker Startの比較</caption>
+          <thead>
+            <tr><th scope="col"><span class="visually-hidden">項目</span></th><th scope="col">独学（動画・記事など）</th><th scope="col" class="is-us">Seeker Start</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">学ぶ順番</th><td>何から手をつければいいか、自分で探す</td><td class="is-us">全5回の学習テーマで整理済み</td></tr>
+            <tr><th scope="row">実戦とのつながり</th><td>知識が実戦に結びつきにくい</td><td class="is-us">実戦に必要な思考プロセスから学ぶ</td></tr>
+            <tr><th scope="row">振り返り</th><td>正解・不正解の確認で終わりがち</td><td class="is-us">判断の理由を言葉にして検証する</td></tr>
+            <tr><th scope="row">疑問の解消</th><td>一人で抱えがち</td><td class="is-us">コーチに直接質問できる</td></tr>
+            <tr><th scope="row">受講スタイル</th><td>―</td><td class="is-us">オンライン・対面、1回から受講可能</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7. コーチ紹介（ARASH!） 素材待ちの箇所は data-pending ===== -->
+  <section class="section" id="coach">
+    <div class="container">
+      <p class="label">COACH</p>
+      <h2 class="section-title">コーチ紹介</h2>
+      <article class="coach">
+        <!-- 紹介動画：YouTubeのURLが届いたら差し替え -->
+        <div class="coach-video" data-pending>
+          <div class="video-placeholder">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10 8.5v7l6-3.5z"/></svg>
+            <p>紹介動画（準備中）</p>
+          </div>
+        </div>
+        <div class="coach-profile">
+          <div class="coach-head">
+            <img class="coach-icon" src="images/coach-arash.jpg" alt="ARASH!のアイコン" width="96" height="96">
+            <div>
+              <p class="coach-role" data-pending>【肩書き：準備中】</p>
+              <h3 class="coach-name">ARASH!</h3>
+            </div>
+          </div>
+          <p class="coach-bio" data-pending>【プロフィール文：準備中】</p>
+          <dl class="coach-data">
+            <div><dt>ポーカー歴</dt><dd data-pending>準備中</dd></div>
+            <div><dt>得意なゲーム</dt><dd data-pending>準備中</dd></div>
+            <div><dt>主な実績</dt><dd data-pending>準備中</dd></div>
+          </dl>
+          <blockquote class="coach-message" data-pending>【指導で大切にしていること：準備中】</blockquote>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== 8. 料金 ===== -->
+  <section class="section section-tint" id="price">
+    <div class="container">
+      <p class="label">PRICE</p>
+      <h2 class="section-title">料金</h2>
+      <div class="price-main">
+        <div class="price-card">
+          <p class="price-badge">都度払いOK</p>
+          <p class="price-unit">1回（約2時間）</p>
+          <p class="price-value">15,000<span>円</span><small>（税込）</small></p>
+          <p class="price-note">全5回のうち、受けたい回を単発で選んで受講できます。</p>
+          <ul class="price-meta">
+            <li><span>お支払い</span>PayPay または 現金</li>
+            <li><span>受講方法</span>オンライン・対面</li>
+          </ul>
+          <a class="btn btn-line" href="https://lin.ee/7NI19sO" target="_blank" rel="noopener">公式LINEで申し込む</a>
+        </div>
+        <div class="price-sets">
+          <p class="price-sets-title">まとめて受講する場合の目安</p>
+          <div class="price-set">
+            <p class="price-set-en">THINK</p>
+            <p class="price-set-name">前半　第1〜3回</p>
+            <p class="price-set-value">45,000円<small>（税込）</small></p>
+          </div>
+          <div class="price-set">
+            <p class="price-set-en">LEARN</p>
+            <p class="price-set-name">後半　第4〜5回</p>
+            <p class="price-set-value">30,000円<small>（税込）</small></p>
+          </div>
+          <div class="price-set price-set-all">
+            <p class="price-set-en">ALL</p>
+            <p class="price-set-name">全5回</p>
+            <p class="price-set-value">75,000円<small>（税込）</small></p>
+          </div>
+          <p class="price-sets-note">※ 1回ごとのお支払いです（15,000円 × 受講回数）。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 9. 受講の流れ ===== -->
+  <section class="section" id="flow">
+    <div class="container">
+      <p class="label">FLOW</p>
+      <h2 class="section-title">受講の流れ</h2>
+      <ol class="flow">
+        <li><span class="flow-no">1</span><h3>公式LINEを友だち追加</h3><p>受けたい回や、いまの悩みをLINEでお気軽にお送りください。</p></li>
+        <li><span class="flow-no">2</span><h3>日程・お支払いのご案内</h3><p>LINEで日程を調整し、お支払い方法をご案内します。</p></li>
+        <li><span class="flow-no">3</span><h3>セッション</h3><p>日程が決まったら、コーチングを開始します。</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== 10. FAQ ===== -->
+  <section class="section section-tint" id="faq">
+    <div class="container narrow">
+      <p class="label">FAQ</p>
+      <h2 class="section-title">よくある質問</h2>
+      <div class="faq">
+        <details><summary>初心者でも受けられますか？</summary><div class="faq-a"><p>はい。ルールを把握していれば大丈夫です。レベルに合わせて進め方を決めます。</p></div></details>
+        <details><summary>後半の回だけ受講することはできますか？</summary><div class="faq-a"><p>はい。全5回のどの回も、単発で選んで受講できます。</p></div></details>
+        <details><summary>支払い方法は何がありますか？</summary><div class="faq-a"><p>PayPay または 現金でのお支払いです。料金は1回（約2時間）15,000円（税込）で、1回ごとの都度払いです。</p></div></details>
+        <details><summary>セッションはどこで行いますか？</summary><div class="faq-a"><p>オフライン（対面）・オンラインのどちらでも受講できます。</p><p>オフライン：場所はお申し込み後に調整します。<br>オンライン：お客様のご希望のツールで行います。</p></div></details>
+        <details><summary>キャンセルや日程変更はできますか？</summary><div class="faq-a"><p>受講予定日時の24時間前まで、キャンセル・日程変更が可能です。公式LINEからご連絡ください。</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 11. 最終CTA ===== -->
+  <section class="cta" id="apply">
+    <div class="container cta-inner">
+      <img class="cta-logo" src="images/logo.png" alt="" width="140" height="192">
+      <div class="cta-body">
+        <p class="label label-on-dark">CONTACT</p>
+        <h2 class="cta-title">詳細・お申込みはこちら</h2>
+        <p>公式LINEを友だち追加して、気軽にご相談ください。<br>オンライン・対面どちらも対応しています。</p>
+        <ol class="cta-steps">
+          <li><span>1</span>公式LINEを友だち追加</li>
+          <li><span>2</span>受けたい回やいまの悩みを、ひとことで送る</li>
         </ol>
+        <div class="cta-actions">
+          <a class="btn btn-line btn-lg" href="https://lin.ee/7NI19sO" target="_blank" rel="noopener">公式LINEを友だち追加</a>
+          <a class="btn btn-ghost" href="#price">料金を見る</a>
+        </div>
         <!-- Googleフォーム（一時停止中）：https://docs.google.com/forms/d/e/1FAIpQLSdcC6eXLek0j-ToBz4_ScLi7vROpwDnhl6rSa1IV9TXrg1UJw/viewform -->
-        <a class="btn btn-line" href="https://lin.ee/7NI19sO" target="_blank" rel="noopener">公式LINEを友だち追加</a>
       </div>
     </div>
   </section>
 </main>
 
-<!-- フッター：シースタ本体と同じ -->
+<!-- ===== フッター ===== -->
 <footer class="site-footer">
-  <div class="container">
-    <ul class="footer-links">
-      <li><a href="https://www.seekerstart.com/learn">学ぶ</a></li>
-      <li><a href="https://www.seekerstart.com/columns">コラム</a></li>
-      <li><a href="https://www.seekerstart.com/glossary">用語集</a></li>
-      <li><a href="https://www.seekerstart.com/tournaments">大会スケジュール</a></li>
-      <li><a href="https://www.seekerstart.com/houou/">鳳凰戦</a></li>
-      <li><a href="./">コーチング</a></li>
-      <li><a href="https://www.seekerstart.com/about">運営情報</a></li>
-      <li><a href="https://www.seekerstart.com/contact">お問い合わせ</a></li>
-      <li><a href="https://www.seekerstart.com/privacy">プライバシーポリシー</a></li>
-    </ul>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="images/logo-sm.png" alt="" width="36" height="49" loading="lazy">
+      <div>
+        <p class="footer-name">Seeker Start</p>
+        <p class="footer-sub">考え方から身につける、キャッシュゲームのコーチング</p>
+      </div>
+    </div>
+    <nav class="footer-nav" aria-label="シースタ">
+      <p class="footer-nav-title">シースタ（SeekerStart）</p>
+      <ul>
+        <li><a href="https://www.seekerstart.com/">トップ</a></li>
+        <li><a href="https://www.seekerstart.com/learn">学ぶ</a></li>
+        <li><a href="https://www.seekerstart.com/columns">コラム</a></li>
+        <li><a href="https://www.seekerstart.com/glossary">用語集</a></li>
+        <li><a href="https://www.seekerstart.com/tournaments">大会スケジュール</a></li>
+        <li><a href="https://www.seekerstart.com/houou/">鳳凰戦</a></li>
+        <li><a href="https://www.seekerstart.com/about">運営情報</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-nav" aria-label="規約・お問い合わせ">
+      <p class="footer-nav-title">ご案内</p>
+      <ul>
+        <li><a href="tokushoho.html">特定商取引法に基づく表記</a></li>
+        <li><a href="https://www.seekerstart.com/privacy">プライバシーポリシー</a></li>
+        <li><a href="https://www.seekerstart.com/contact">お問い合わせ</a></li>
+        <li><a href="https://lin.ee/7NI19sO" target="_blank" rel="noopener">公式LINE</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <p>Presented by Seeker Start</p>
     <p>© 2026 シースタ (SeekerStart)</p>
   </div>
 </footer>
+
+<!-- スマホ用 固定LINEボタン -->
+<div class="sticky-cta">
+  <a class="btn btn-line" href="https://lin.ee/7NI19sO" target="_blank" rel="noopener">公式LINEで相談する</a>
+</div>
 
 </body>
 </html>
