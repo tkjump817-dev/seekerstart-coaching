@@ -18,7 +18,7 @@
 <link rel="apple-touch-icon" href="images/logo-sm.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&family=Shippori+Mincho+B1:wght@600;700&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap">
 <link rel="preload" as="image" href="images/hero.jpg" imagesrcset="images/hero-sm.jpg 960w, images/hero.jpg 1672w" imagesizes="100vw">
 <link rel="stylesheet" href="style.css">
 <script>document.documentElement.classList.add('js');</script>
@@ -105,35 +105,53 @@
     </div>
   </section>
 
-  <!-- ===== 4. コンセプト THINK → LEARN → GROW ===== -->
-  <section class="section concept" id="concept">
+  <!-- ===== 4. コンセプト「考える。深める。その先へ。」 =====
+       写真の差し替え：各 .concept-media の中を <img src="images/..." alt="..."> に置き換え、data-pending を外す -->
+  <section class="concept" id="concept">
     <div class="container">
-      <p class="label label-on-dark">CONCEPT</p>
-      <h2 class="section-title on-dark">THINK → LEARN → GROW</h2>
-      <p class="section-lead on-dark">考え方を学び、学び方を身につけ、自ら成長できるプレイヤーへ。</p>
-      <ol class="stages">
-        <li class="stage">
-          <svg class="stage-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V6a3 3 0 0 0-3-3Z"/><path d="M15 3a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/><path d="M12 8h2M12 13h3"/></svg>
-          <p class="stage-en">THINK</p>
-          <h3 class="stage-title">考え方を学ぶ</h3>
-          <p class="stage-when">前半　第1〜3回</p>
-          <p class="stage-text">実戦に必要な思考プロセスを学び、感覚頼りのプレーからの卒業を目指します。</p>
-        </li>
-        <li class="stage">
-          <svg class="stage-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5C5.5 4 8.5 4 12 6c3.5-2 6.5-2 9-.5V19c-2.5-1.5-5.5-1.5-9 .5-3.5-2-6.5-2-9-.5Z"/><path d="M12 6v13.5"/></svg>
-          <p class="stage-en">LEARN</p>
-          <h3 class="stage-title">学び方を身につける</h3>
-          <p class="stage-when">後半　第4〜5回</p>
-          <p class="stage-text">GTOや戦略教材を自分で読み解き、学習を進める方法を習得します。</p>
-        </li>
-        <li class="stage stage-goal">
-          <svg class="stage-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
-          <p class="stage-en">GROW</p>
-          <h3 class="stage-title">自ら成長する</h3>
-          <p class="stage-when">GOAL</p>
-          <p class="stage-text">学ぶべきことを整理し、自分の力で成長していくための道筋をつくります。</p>
-        </li>
-      </ol>
+      <header class="concept-head">
+        <p class="concept-kicker">コンセプト</p>
+        <h2 class="concept-title"><span>考える。</span><span>深める。</span><span>その先へ。</span></h2>
+        <p class="concept-lead">自分のアクションを選んだ理由を、<br class="sp">自分の言葉で説明できるプレイヤーへ。</p>
+      </header>
+
+      <article class="concept-row">
+        <figure class="concept-media">
+          <img src="images/hero-sm.jpg" alt="戦略を書き込んだノートとポーカーチップが並ぶテーブル" width="960" height="540" loading="lazy">
+        </figure>
+        <div class="concept-text">
+          <p class="concept-step"><span class="concept-num">一</span><span class="concept-when">第1回〜第3回</span></p>
+          <h3 class="concept-name">考える。</h3>
+          <p class="concept-catch">アクションには、理由がある。</p>
+          <p class="concept-body">相手のレンジを絞り込み、その相手に対してどのようなアクションが有効なのかを考える。実戦で必要となる思考プロセスを身につけます。</p>
+        </div>
+      </article>
+
+      <article class="concept-row is-reverse">
+        <figure class="concept-media" data-pending>
+          <span class="concept-media-mark" aria-hidden="true">深</span>
+          <figcaption class="visually-hidden">講義資料の写真（準備中）</figcaption>
+        </figure>
+        <div class="concept-text">
+          <p class="concept-step"><span class="concept-num">二</span><span class="concept-when">補講1・補講2</span></p>
+          <h3 class="concept-name">深める。</h3>
+          <p class="concept-catch">戦略の背景にある理論を知る。</p>
+          <p class="concept-body">ポーカー算数やtoy-gameを通じて、戦略が成り立つ仕組みを学ぶ。実戦での判断を支える知識を深めます。</p>
+        </div>
+      </article>
+
+      <article class="concept-row is-goal">
+        <figure class="concept-media" data-pending>
+          <span class="concept-media-mark" aria-hidden="true">先</span>
+          <figcaption class="visually-hidden">ポーカーの写真（準備中）</figcaption>
+        </figure>
+        <div class="concept-text">
+          <p class="concept-step"><span class="concept-num">三</span><span class="concept-when">コーチング終了後</span></p>
+          <h3 class="concept-name">その先へ。</h3>
+          <p class="concept-catch">自分で考え、自分で上達する。</p>
+          <p class="concept-body">自身のプレーを振り返り、課題を見つけ、次の実戦に活かす。コーチングが終わった後も、自分の力で学び続けられることを目指します。</p>
+        </div>
+      </article>
     </div>
   </section>
 
