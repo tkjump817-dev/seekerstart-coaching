@@ -23,6 +23,7 @@
 
   --font-body: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
   --font-head: "Zen Kaku Gothic New", var(--font-body);
+  --font-mincho: "Shippori Mincho B1", "Hiragino Mincho ProN", "Yu Mincho", serif;
   --font-en: "Manrope", "Helvetica Neue", Arial, sans-serif;
 
   --radius: 14px;
@@ -245,7 +246,7 @@ mark {
 @media (max-width: 760px) { .walls { grid-template-columns: 1fr; } }
 
 /* ---------- コンセプト「考える。深める。その先へ。」 ---------- */
-.concept { --font-mincho: "Shippori Mincho B1", "Hiragino Mincho ProN", "Yu Mincho", serif; background: #FAFBFD; padding: 136px 0 120px; }
+.concept { background: #FAFBFD; padding: 136px 0 120px; }
 .concept-head { max-width: 1040px; margin: 0 auto 112px; text-align: center; }
 .concept-kicker {
   display: inline-flex; align-items: center; gap: 14px;
@@ -316,7 +317,8 @@ mark {
 /* ---------- カリキュラム ---------- */
 .phase { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; padding: 36px 0; border-top: 1px solid var(--border); }
 .phase:first-of-type { border-top: 0; padding-top: 0; }
-.phase-en { font-family: var(--font-en); font-weight: 800; font-size: 28px; letter-spacing: .12em; color: var(--navy-900); }
+.phase-en { font-family: var(--font-mincho); font-weight: 700; font-size: 30px; letter-spacing: .1em; color: var(--navy-900); line-height: 1.4; }
+.phase-goal .phase-en { color: var(--blue-600); }
 .phase-ja { font-size: 14px; color: var(--muted); }
 .sessions { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
 .session {
@@ -454,8 +456,8 @@ mark {
 .price-card .btn { margin-top: auto; }
 .price-sets { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 32px; display: flex; flex-direction: column; gap: 12px; }
 .price-sets-title { font-family: var(--font-head); font-weight: 700; color: var(--navy-900); margin-bottom: 6px; }
-.price-set { display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 16px 18px; border-radius: 10px; background: var(--bg-tint); }
-.price-set-en { font-family: var(--font-en); font-weight: 800; font-size: 13px; letter-spacing: .14em; color: var(--blue-600); }
+.price-set { display: grid; grid-template-columns: 96px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 16px 18px; border-radius: 10px; background: var(--bg-tint); }
+.price-set-en { font-family: var(--font-mincho); font-weight: 700; font-size: 16px; letter-spacing: .06em; color: var(--blue-600); }
 .price-set-name { font-weight: 500; font-size: 15px; }
 .price-set-value { font-family: var(--font-en); font-weight: 800; font-size: 20px; color: var(--navy-900); white-space: nowrap; }
 .price-set-value small { font-family: var(--font-body); font-size: 11px; font-weight: 500; color: var(--muted); }
