@@ -163,11 +163,7 @@ mark {
     linear-gradient(90deg, rgba(7,16,34,.96) 0%, rgba(7,16,34,.88) 38%, rgba(12,26,51,.45) 70%, rgba(12,26,51,.25) 100%),
     linear-gradient(0deg, rgba(7,16,34,.65) 0%, rgba(7,16,34,0) 35%);
 }
-.hero-inner { padding-top: 72px; padding-bottom: 80px; }
-.hero-eyebrow {
-  display: flex; flex-wrap: wrap; gap: 6px 18px; margin-bottom: 28px;
-  font-family: var(--font-en); font-weight: 600; font-size: 12px; letter-spacing: .28em; color: var(--blue-300);
-}
+.hero-inner { padding-top: 88px; padding-bottom: 80px; }
 .hero-question {
   display: inline-block; margin-bottom: 18px; padding: 6px 14px;
   background: var(--gold); color: var(--navy-950);
@@ -188,10 +184,12 @@ mark {
   max-width: 720px;
 }
 .hero-facts li {
+  display: flex; flex-direction: column; justify-content: center;
   padding: 14px 22px; font-size: 12px; color: rgba(255,255,255,.75); line-height: 1.5;
   border-left: 1px solid rgba(156,189,248,.2);
 }
 .hero-facts li:first-child { border-left: 0; }
+.hero-facts .nb { display: inline-block; }
 .hero-facts strong { display: block; font-size: 17px; color: #fff; font-weight: 700; }
 .hero-actions { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 14px; }
 
@@ -202,8 +200,7 @@ mark {
     background: linear-gradient(180deg, rgba(7,16,34,.15) 0, rgba(7,16,34,.55) 40vw, var(--navy-950) 62vw, var(--navy-950) 100%);
   }
   .hero-inner { padding-top: 0; padding-bottom: 56px; }
-  .hero-eyebrow { margin-bottom: 16px; font-size: 10px; letter-spacing: .22em; }
-  .hero-title { font-size: clamp(26px, 7.6vw, 34px); }
+    .hero-title { font-size: clamp(26px, 7.6vw, 34px); }
   .hero-facts { grid-template-columns: repeat(2, 1fr); }
   .hero-facts li { border-left: 0; border-top: 1px solid rgba(156,189,248,.2); padding: 12px 16px; }
   .hero-facts li:nth-child(-n+2) { border-top: 0; }
