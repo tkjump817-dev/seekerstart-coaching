@@ -154,61 +154,159 @@
     </div>
   </section>
 
-  <!-- ===== 5. カリキュラム（チラシ「学習テーマ」準拠） ===== -->
-  <section class="section" id="curriculum">
+  <!-- ===== 5. カリキュラム（講義資料 Section1・Section2 に基づく） ===== -->
+  <section class="section curriculum" id="curriculum">
     <div class="container">
-      <p class="label">CURRICULUM</p>
-      <h2 class="section-title">学習テーマ　全3回＋補講2回</h2>
-      <p class="section-lead">1回約2時間。どの回も単発で選んで受講できます。</p>
+      <header class="cur-head">
+        <p class="cur-kicker">カリキュラム</p>
+        <h2 class="section-title">講義の内容</h2>
+        <p class="section-lead">基本講義3回と補講2回。1講義約2時間で、どの講義も単発で受講できます。</p>
+      </header>
 
-      <div class="phase">
-        <div class="phase-head">
-          <p class="phase-en">考える。</p>
-          <p class="phase-ja">第1回〜第3回</p>
+      <!-- 基本講義 -->
+      <div class="track">
+        <div class="track-side">
+          <p class="track-name">考える。</p>
+          <p class="track-kind">基本講義・全3回</p>
+          <p class="track-note">前の回で学んだことを土台に、PreflopからRiverへ、さらにまだ見ていない場面へと、考える範囲を広げていく3回です。</p>
         </div>
-        <ol class="sessions">
-          <li class="session">
-            <p class="session-no">第<span>1</span>回</p>
-            <div><h3>基本編</h3><p>バリューとブラフ、Preflop→Flopのレンジの絞り込み</p></div>
+
+        <ol class="lectures">
+          <li>
+            <details class="lecture" open>
+              <summary>
+                <span class="lecture-no">第<b>1</b>回</span>
+                <span class="lecture-head">
+                  <span class="lecture-title">基本編</span>
+                  <span class="lecture-sum">バリューとブラフ、Preflop〜Flopのレンジの絞り込み</span>
+                </span>
+                <span class="lecture-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="lecture-body">
+                <div class="lecture-goal">
+                  <p class="lecture-label">この講義のゴール</p>
+                  <p>PreflopからFlopを跨いでレンジを絞り込み、相手のレンジに対するアクションを、バリューとブラフの概念で判断できる。</p>
+                </div>
+                <div class="lecture-cols">
+                  <div>
+                    <p class="lecture-label">学ぶ内容</p>
+                    <ul class="lecture-list">
+                      <li>バリューベットとブラフベットの考え方</li>
+                      <li>PreflopからFlopにかけてのレンジの絞り込み</li>
+                      <li>自分のハンドを相手のレンジに対して相対的に評価する</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p class="lecture-label">身につけたい考え方</p>
+                    <p class="lecture-mind">ハンドの強さは、役の名前では決まらない。<br>相手のレンジの中の、どれくらいの割合に勝てているかで決まる。</p>
+                    <p class="lecture-mind-sub">相手のハンドを1つに当てにいくのではなく、持ちうるハンドの集合（レンジ）として考える。</p>
+                  </div>
+                </div>
+              </div>
+            </details>
           </li>
-          <li class="session">
-            <p class="session-no">第<span>2</span>回</p>
-            <div><h3>搾取の基礎</h3><p>Flop→Riverのアクションによるレンジの絞り込み、効果的な応答</p></div>
+
+          <li>
+            <details class="lecture">
+              <summary>
+                <span class="lecture-no">第<b>2</b>回</span>
+                <span class="lecture-head">
+                  <span class="lecture-title">搾取の基礎</span>
+                  <span class="lecture-sum">相手のアクションによるレンジの分割と、それに対する効果的な応答</span>
+                </span>
+                <span class="lecture-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="lecture-body">
+                <div class="lecture-goal">
+                  <p class="lecture-label">この講義のゴール</p>
+                  <p>相手のレンジと戦略を推定し、それに対して最もEVの高いアクションを選べるようになる。</p>
+                </div>
+                <div class="lecture-cols">
+                  <div>
+                    <p class="lecture-label">学ぶ内容</p>
+                    <ul class="lecture-list">
+                      <li>相手のアクションやベットサイズからレンジを絞り込む</li>
+                      <li>相手の戦略を推定し、それに対する応答を考える</li>
+                      <li>Bet、Check、Fold、Call、Raiseの選択肢を期待値の観点から比較する</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p class="lecture-label">身につけたい考え方</p>
+                    <p class="lecture-mind">EVは、自分と相手の戦略の組み合わせで決まる。</p>
+                    <p class="lecture-mind-sub">同じハンドでも、相手の戦略が違えば最善のアクションも変わる。</p>
+                  </div>
+                </div>
+                <div class="lecture-process">
+                  <p class="lecture-label">講義で使う、5つの思考プロセス</p>
+                  <ol>
+                    <li>Preflopのレンジを確認する</li>
+                    <li>アクション履歴から現在のレンジを推測する</li>
+                    <li>各ハンドのアクションについて仮説を立てる</li>
+                    <li>自分のアクションに対する応答を予測する</li>
+                    <li>EVを比較して最善のアクションを選ぶ</li>
+                  </ol>
+                </div>
+              </div>
+            </details>
           </li>
-          <li class="session">
-            <p class="session-no">第<span>3</span>回</p>
-            <div><h3>搾取の発展</h3><p>よくあるリークの類型と観測、テルによるレンジの分割</p></div>
+
+          <li>
+            <details class="lecture">
+              <summary>
+                <span class="lecture-no">第<b>3</b>回</span>
+                <span class="lecture-head">
+                  <span class="lecture-title">搾取の発展</span>
+                  <span class="lecture-sum">観測した行動から相手の行動原理を推測し、読みを広げる</span>
+                </span>
+                <span class="lecture-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="lecture-body">
+                <div class="lecture-goal">
+                  <p class="lecture-label">この講義で目指すこと</p>
+                  <p>観測した行動から相手の行動原理を推測し、まだ見ていない別の場面にまで読みを広げる。</p>
+                </div>
+                <div class="lecture-cols">
+                  <div>
+                    <p class="lecture-label">学ぶ内容</p>
+                    <ul class="lecture-list">
+                      <li>観測した行動から相手の行動原理を推測する</li>
+                      <li>観測していない状況にも読みを広げる</li>
+                      <li>相手の傾向を踏まえた判断につなげる</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p class="lecture-label">身につけたい考え方</p>
+                    <!-- 要確認：第3回の講義資料が届いたら、資料の言葉に合わせて調整 -->
+                    <p class="lecture-mind">見えた行動の一つひとつを、相手の考え方を知る手がかりとして捉える。</p>
+                  </div>
+                </div>
+              </div>
+            </details>
           </li>
         </ol>
       </div>
 
-      <div class="phase">
-        <div class="phase-head">
-          <p class="phase-en">深める。</p>
-          <p class="phase-ja">補講1・補講2</p>
+      <!-- 補講 -->
+      <div class="track track-extra">
+        <div class="track-side">
+          <p class="track-name">深める。</p>
+          <p class="track-kind">補講・全2回</p>
+          <p class="track-note">基本講義とは別に用意している講義です。こちらも単発で受講できます。</p>
         </div>
-        <ol class="sessions">
-          <li class="session">
-            <p class="session-no">補講<span>1</span></p>
-            <div><h3>ポーカー算数</h3><p>ポーカーに関連する算数と発展概念を学ぶ</p></div>
-          </li>
-          <li class="session">
-            <p class="session-no">補講<span>2</span></p>
-            <div><h3>toy-game</h3><p>ポーカーの本質をtoy-gameで学ぶ</p></div>
-          </li>
-        </ol>
-      </div>
-
-      <div class="phase phase-goal">
-        <div class="phase-head">
-          <p class="phase-en">その先へ。</p>
-          <p class="phase-ja">コーチング終了後</p>
+        <div class="extras">
+          <article class="extra">
+            <p class="extra-no">補講<b>1</b></p>
+            <h3 class="extra-title">ポーカー算数</h3>
+            <p class="lecture-label">学ぶ内容</p>
+            <p class="extra-text">ポーカーに関わる算数と発展概念を学ぶ。</p>
+          </article>
+          <article class="extra">
+            <p class="extra-no">補講<b>2</b></p>
+            <h3 class="extra-title">Toy Model</h3>
+            <p class="lecture-label">学ぶ内容</p>
+            <p class="extra-text">単純化したモデルを通じて、ポーカーの戦略の本質を学ぶ。</p>
+          </article>
         </div>
-        <ul class="goals">
-          <li>アクションを決定した理由を言語化できる</li>
-          <li>自分で振り返り学習ができる</li>
-          <li>GTOや戦略教材を自分で読み解き、学習を進められる</li>
-        </ul>
       </div>
     </div>
   </section>

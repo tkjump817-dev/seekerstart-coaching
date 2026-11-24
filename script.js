@@ -34,7 +34,7 @@
   }
 
   // スクロールでふわっと表示
-  var targets = document.querySelectorAll('.section .section-title, .walls li, .concept-head, .concept-row, .session, .goals li, .method-steps li, .practice, .wall3, .support-questions, .support-place, .coach, .price-card, .price-sets, .flow li, .faq details');
+  var targets = document.querySelectorAll('.section .section-title, .walls li, .concept-head, .concept-row, .lectures > li, .extra, .method-steps li, .practice, .wall3, .support-questions, .support-place, .coach, .price-card, .price-sets, .flow li, .faq details');
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {

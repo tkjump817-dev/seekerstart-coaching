@@ -312,43 +312,117 @@ mark {
 }
 
 /* ---------- カリキュラム ---------- */
-.phase { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; padding: 36px 0; border-top: 1px solid var(--border); }
-.phase:first-of-type { border-top: 0; padding-top: 0; }
-.phase-en { font-family: var(--font-mincho); font-weight: 700; font-size: 30px; letter-spacing: .1em; color: var(--navy-900); line-height: 1.4; }
-.phase-goal .phase-en { color: var(--blue-600); }
-.phase-ja { font-size: 14px; color: var(--muted); }
-.sessions { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
-.session {
-  display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 20px; align-items: center;
-  background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
-  padding: 20px 24px; box-shadow: 0 1px 0 rgba(14,26,47,.02);
+.cur-head { margin-bottom: 64px; }
+.cur-kicker {
+  display: inline-flex; align-items: center; gap: 14px; margin-bottom: 16px;
+  font-size: 13px; font-weight: 700; letter-spacing: .32em; color: var(--blue-600);
 }
-.session-no {
-  display: flex; align-items: baseline; justify-content: center; gap: 2px;
-  background: var(--navy-900); color: #fff; border-radius: 10px; padding: 10px 0;
-  font-size: 13px; font-weight: 700;
+.cur-kicker::before { content: ""; width: 28px; height: 1px; background: currentColor; }
+
+.track { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 56px; align-items: start; }
+.track-side { position: sticky; top: calc(var(--header-h) + 32px); }
+.track-name {
+  font-family: var(--font-mincho); font-weight: 700; color: var(--navy-900);
+  font-size: clamp(34px, 3.6vw, 44px); line-height: 1.3; letter-spacing: .1em;
 }
-.session-no span { font-family: var(--font-en); font-size: 26px; font-weight: 800; line-height: 1; }
-.session h3 { margin: 0 0 2px; font-size: 18px; color: var(--navy-900); }
-.session div p { color: var(--muted); font-size: 15px; line-height: 1.75; }
-.phase:nth-of-type(2) .session-no { background: var(--blue-600); }
-.goals { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
-.goals li {
-  position: relative; padding: 18px 24px 18px 56px;
-  background: var(--navy-900); color: #fff; border-radius: var(--radius); font-weight: 500;
+.track-kind {
+  display: inline-block; margin-top: 12px; padding: 3px 12px; border-radius: 4px;
+  background: var(--navy-900); color: #fff; font-size: 13px; font-weight: 700; letter-spacing: .1em;
 }
-.goals li::before {
-  content: ""; position: absolute; left: 22px; top: 50%; width: 18px; height: 18px; transform: translateY(-50%);
-  background: no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E8C94A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E");
+.track-note { margin-top: 20px; color: var(--muted); font-size: 14px; line-height: 2; }
+
+/* 基本講義：縦のライン＋開閉できる講義 */
+.lectures { list-style: none; margin: 0; padding: 0; position: relative; }
+.lectures::before {
+  content: ""; position: absolute; left: 39px; top: 40px; bottom: 40px; width: 1px; background: var(--border);
 }
-@media (max-width: 760px) {
-  .phase { grid-template-columns: 1fr; gap: 16px; padding: 28px 0; }
-  .phase-head { display: flex; align-items: baseline; gap: 12px; }
-  .session { grid-template-columns: 64px minmax(0, 1fr); gap: 14px; padding: 16px; }
-  .session-no { flex-direction: column; align-items: center; padding: 8px 0; font-size: 11px; }
-  .session-no span { font-size: 22px; }
-  .session h3 { font-size: 16px; }
-  .session div p { font-size: 14px; }
+.lectures > li + li { margin-top: 16px; }
+.lecture { position: relative; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); transition: border-color .2s ease, box-shadow .2s ease; }
+.lecture[open] { border-color: var(--blue-300); box-shadow: 0 18px 40px -28px rgba(19, 39, 73, .45); }
+.lecture summary {
+  list-style: none; cursor: pointer; display: grid; grid-template-columns: 80px minmax(0, 1fr) 32px;
+  gap: 20px; align-items: center; padding: 22px 24px 22px 0; min-height: 44px;
+}
+.lecture summary::-webkit-details-marker { display: none; }
+.lecture-no {
+  position: relative; z-index: 1; justify-self: center;
+  display: inline-flex; align-items: baseline; gap: 1px;
+  font-size: 12px; font-weight: 700; color: var(--navy-900);
+  background: #fff; padding: 6px 4px;
+}
+.lecture-no b { font-family: var(--font-mincho); font-size: 34px; line-height: 1; color: var(--navy-900); margin: 0 1px; }
+.lecture-head { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.lecture-title { font-family: var(--font-head); font-weight: 700; font-size: 20px; color: var(--navy-900); letter-spacing: .04em; }
+.lecture-sum { font-size: 14px; color: var(--muted); line-height: 1.7; }
+.lecture-toggle { position: relative; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--border); }
+.lecture-toggle::before, .lecture-toggle::after {
+  content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 1.5px; background: var(--navy-700);
+  transform: translate(-50%, -50%); transition: transform .2s ease;
+}
+.lecture-toggle::after { transform: translate(-50%, -50%) rotate(90deg); }
+.lecture[open] .lecture-toggle { border-color: var(--blue-600); }
+.lecture[open] .lecture-toggle::after { transform: translate(-50%, -50%) rotate(0deg); }
+.lecture summary:hover .lecture-title { color: var(--blue-600); }
+
+.lecture-body { padding: 0 28px 28px 100px; display: grid; gap: 24px; }
+.lecture-label { font-size: 12px; font-weight: 700; letter-spacing: .12em; color: var(--blue-600); margin-bottom: 8px; }
+.lecture-goal { padding: 18px 20px; background: var(--bg-tint); border-radius: var(--radius-sm); }
+.lecture-goal p:not(.lecture-label) { color: var(--navy-900); font-weight: 500; line-height: 1.9; }
+.lecture-cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; }
+.lecture-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.lecture-list li { position: relative; padding-left: 18px; font-size: 15px; line-height: 1.8; }
+.lecture-list li::before { content: ""; position: absolute; left: 0; top: .75em; width: 8px; height: 1.5px; background: var(--blue-600); }
+.lecture-mind {
+  font-family: var(--font-mincho); font-weight: 700; color: var(--navy-900);
+  font-size: 18px; line-height: 1.9; letter-spacing: .04em;
+  padding-left: 16px; border-left: 2px solid var(--navy-900);
+}
+.lecture-mind-sub { margin-top: 12px; padding-left: 18px; color: var(--muted); font-size: 14px; line-height: 1.9; }
+.lecture-process ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; counter-reset: step; }
+.lecture-process li {
+  counter-increment: step; position: relative; padding: 14px 12px 14px; border-top: 2px solid var(--navy-900);
+  font-size: 13px; line-height: 1.7; color: var(--text); background: var(--bg-tint);
+}
+.lecture-process li::before {
+  content: counter(step); display: block; margin-bottom: 4px;
+  font-family: var(--font-mincho); font-weight: 700; font-size: 18px; color: var(--blue-600); line-height: 1;
+}
+
+/* 補講：基本講義と区別した、控えめなトーン */
+.track-extra { margin-top: 96px; padding-top: 72px; border-top: 1px solid var(--border); }
+.track-extra .track-name { color: var(--blue-600); }
+.track-extra .track-kind { background: transparent; color: var(--blue-600); border: 1px solid var(--blue-300); }
+.extras { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.extra { padding: 28px 28px 30px; background: var(--bg-tint); border-radius: var(--radius); border: 1px dashed var(--blue-300); }
+.extra-no { display: inline-flex; align-items: baseline; gap: 2px; font-size: 12px; font-weight: 700; color: var(--blue-600); letter-spacing: .06em; }
+.extra-no b { font-family: var(--font-mincho); font-size: 26px; line-height: 1; margin-left: 2px; }
+.extra-title { margin: 10px 0 18px; font-size: 20px; color: var(--navy-900); }
+.extra-text { font-size: 15px; line-height: 1.9; }
+
+@media (max-width: 960px) {
+  .track { grid-template-columns: 1fr; gap: 28px; }
+  .track-side { position: static; }
+  .track-name { display: inline; margin-right: 12px; }
+  .track-kind { vertical-align: middle; margin-top: 0; }
+  .track-note { margin-top: 12px; }
+  .lecture-process ol { grid-template-columns: 1fr; }
+  .lecture-process li { display: flex; gap: 12px; align-items: baseline; border-top: 0; border-left: 2px solid var(--navy-900); }
+  .lecture-process li::before { margin: 0; }
+}
+@media (max-width: 680px) {
+  .cur-head { margin-bottom: 40px; }
+  .lectures::before { left: 31px; }
+  .lecture summary { grid-template-columns: 64px minmax(0, 1fr) 28px; gap: 12px; padding: 18px 16px 18px 0; }
+  .lecture-no b { font-size: 28px; }
+  .lecture-title { font-size: 18px; }
+  .lecture-sum { font-size: 13px; }
+  .lecture-toggle { width: 28px; height: 28px; }
+  .lecture-body { padding: 0 18px 22px 18px; gap: 20px; }
+  .lecture-cols { grid-template-columns: 1fr; gap: 22px; }
+  .lecture-mind { font-size: 17px; }
+  .extras { grid-template-columns: 1fr; }
+  .extra { padding: 24px 20px; }
+  .track-extra { margin-top: 64px; padding-top: 56px; }
 }
 
 /* ---------- 授業の進め方 ---------- */
